@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@applitools/dom-capture@7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@applitools/dom-capture/-/dom-capture-7.2.0.tgz#97c911327e900aaea74a6ab7e9761f74a8f891b5"
-  integrity sha512-9Z7Cbf5+9LdAUE7EdZebgrqO5EJE/h1Z2KHEGu1YWjQXtYjd8QXebNdnULC5yki43pWNrEJl0eqhk94q/l7bgw==
-  dependencies:
-    "@applitools/functional-commons" "^1.5.4"
-
 "@applitools/dom-capture@7.2.6", "@applitools/dom-capture@^7.1.2":
   version "7.2.6"
   resolved "https://registry.yarnpkg.com/@applitools/dom-capture/-/dom-capture-7.2.6.tgz#351e65db255cbb7524f98820836c4aae6a44bc82"
@@ -70,24 +63,6 @@
     axios "0.19.2"
     chalk "3.0.0"
     es6-promise-pool "2.5.0"
-    tunnel "0.0.6"
-
-"@applitools/eyes-sdk-core@10.3.0":
-  version "10.3.0"
-  resolved "https://registry.yarnpkg.com/@applitools/eyes-sdk-core/-/eyes-sdk-core-10.3.0.tgz#ed2850afe1e21ab03b19b1f89638551817e34aa8"
-  integrity sha512-/YIEwTePy+T0pywaUo1zUsNcGr1djZUalQvKEjUrQAObiNGw+9l2G94uUkr/v933+5QOy6duwMmFm3JTYmDgAA==
-  dependencies:
-    "@applitools/dom-capture" "7.2.0"
-    "@applitools/isomorphic-fetch" "3.0.0"
-    axios "0.19.2"
-    chalk "3.0.0"
-    cosmiconfig "^6.0.0"
-    dateformat "^3.0.3"
-    debug "^4.1.1"
-    deepmerge "^4.2.2"
-    es6-promise-pool "2.5.0"
-    png-async "^0.9.4"
-    stack-trace "^0.0.10"
     tunnel "0.0.6"
 
 "@applitools/eyes-sdk-core@11.5.0":
@@ -160,14 +135,6 @@
     png-async "^0.9.4"
     stack-trace "^0.0.10"
     tunnel "0.0.6"
-
-"@applitools/eyes-webdriverio@5.19.2":
-  version "5.19.2"
-  resolved "https://registry.yarnpkg.com/@applitools/eyes-webdriverio/-/eyes-webdriverio-5.19.2.tgz#c29a6368bac45d06b83aacb386857ca374b9fb3b"
-  integrity sha512-gVY0ucTRX3YXyEIqBz8QmdJD6wV51gHUkidaNvG1OH4GyvKMpDZaO0kiiZC/MDEh3T4FDwvOZ28W74RGGBqnIw==
-  dependencies:
-    "@applitools/eyes-sdk-core" "11.5.0"
-    "@applitools/visual-grid-client" "14.6.0"
 
 "@applitools/feature-flags@2.1.1":
   version "2.1.1"
@@ -283,26 +250,6 @@
   dependencies:
     "@applitools/dom-snapshot" "3.5.2"
     "@applitools/eyes-sdk-core" "10.1.2"
-    "@applitools/feature-flags" "2.1.1"
-    "@applitools/functional-commons" "1.5.4"
-    "@applitools/http-commons" "2.3.12"
-    "@applitools/isomorphic-fetch" "3.0.0"
-    "@applitools/jsdom" "1.0.2"
-    chalk "3.0.0"
-    he "1.2.0"
-    lodash.mapvalues "^4.6.0"
-    mime-types "^2.1.24"
-    mkdirp "^0.5.1"
-    postcss-value-parser "^4.0.2"
-    throat "^5.0.0"
-
-"@applitools/visual-grid-client@14.2.0":
-  version "14.2.0"
-  resolved "https://registry.yarnpkg.com/@applitools/visual-grid-client/-/visual-grid-client-14.2.0.tgz#3d26e1f394bf2cf92b6d29e980e174c3226159cb"
-  integrity sha512-P6baOi/SslqmBMPoK7yb+GIg6wDmXqwdmidYiYDePmga4AWgUaUEJxVVOziHbxglKPtgWs9OBCmPzGBeF4Ob9Q==
-  dependencies:
-    "@applitools/dom-snapshot" "3.5.2"
-    "@applitools/eyes-sdk-core" "10.3.0"
     "@applitools/feature-flags" "2.1.1"
     "@applitools/functional-commons" "1.5.4"
     "@applitools/http-commons" "2.3.12"
@@ -18305,6 +18252,7 @@ select@^1.1.2:
   integrity sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
 
 "selenium-webdriver-3@npm:selenium-webdriver@^3.6.0", selenium-webdriver@3.6.0, selenium-webdriver@^3.0.1, selenium-webdriver@^3.6.0:
+  name selenium-webdriver-3
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/selenium-webdriver/-/selenium-webdriver-3.6.0.tgz#2ba87a1662c020b8988c981ae62cb2a01298eafc"
   integrity sha512-WH7Aldse+2P5bbFBO4Gle/nuQOdVwpHMTL6raL3uuBj/vPG07k6uzt3aiahu352ONBr5xXh0hDlM3LhtXPOC4Q==

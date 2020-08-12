@@ -1,0 +1,17 @@
+FROM tutorial_nodejs:latest
+
+RUN cd home/project \
+    && git clone https://github.com/applitools/tutorial-selenium-javascript-basic.git \
+    && cd tutorial-selenium-javascript-basic \
+    && find ./test -type f -exec sed -i "s/'APPLITOOLS_API_KEY'/process.env.APPLITOOLS_API_KEY/g" {} \;
+
+COPY basic/start.sh /
+COPY package/ /
+
+RUN filename=$(find applitools*.tgz) \
+    && mv $filename home/project/tutorial-selenium-javascript-basic/$filename \
+    && cd home/project/tutorial-selenium-javascript-basic \
+    && npm install ./$filename \
+    && npm install
+
+CMD '/start.sh'
