@@ -1,0 +1,17 @@
+FROM tutorial_nodejs:latest
+
+RUN cd home/project \
+    && git clone https://github.com/applitools/tutorial-webdriverio5-ultrafastgrid.git \
+    && cd tutorial-webdriverio5-ultrafastgrid \
+    && find ./test -type f -exec sed -i "s/'APPLITOOLS_API_KEY'/process.env.APPLITOOLS_API_KEY/g" {} \;
+
+COPY ultrafastgrid/start.sh /
+COPY package/ /
+
+RUN filename=$(find applitools*.tgz) \
+    && mv $filename home/project/tutorial-webdriverio5-ultrafastgrid/$filename \
+    && cd home/project/tutorial-webdriverio5-ultrafastgrid \
+    && npm install ./$filename \
+    && npm install
+
+CMD '/start.sh'
