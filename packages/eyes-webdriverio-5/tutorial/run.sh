@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 rm -r ./package
 mkdir package
 cd ..

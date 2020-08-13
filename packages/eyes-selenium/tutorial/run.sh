@@ -1,6 +1,6 @@
 #!/bin/bash
-
-rm -r ./package
+set -e
+[ -d "./package" ] && rm -r ./package
 mkdir package
 cd ..
 yarn pack
