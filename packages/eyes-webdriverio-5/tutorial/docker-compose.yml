@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  selenium:
+    image: selenium/standalone-chrome:3.141.59
+    shm_size: '2gb'
+  wdio5_selenium_basic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APPLITOOLS_API_KEY
+    depends_on:
+      - selenium
+  wdio5_selenium_ultrafastgrid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        repo: tutorial-webdriverio5-ultrafastgrid
+    environment:
+      - APPLITOOLS_API_KEY
+    depends_on:
+      - selenium
