@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  js_selenium_basic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APPLITOOLS_API_KEY
+  js_selenium_ultrafastgrid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        repo: tutorial-selenium-javascript-ultrafastgrid
+    environment:
+      - APPLITOOLS_API_KEY
+  js_selenium3_basic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        repo: tutorial-selenium3-javascript-basic
+    environment:
+      - APPLITOOLS_API_KEY
+  js_selenium3_ultrafastgrid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        repo: tutorial-selenium3-javascript-ultrafastgrid
+    environment:
+      - APPLITOOLS_API_KEY

@@ -7,5 +7,6 @@ yarn pack
 package=$(find applitools*.tgz)
 mv "$package" ./tutorial/package/"$package"
 cd ./tutorial
-docker build -t js_selenium_basic .
-docker build -t js_selenium_ultrafastgrid -f ./Dockerfile.ultrafastgrid .
+docker-compose build
+docker-compose run wdio4_selenium_basic
+docker-compose run wdio4_selenium_ultrafastgrid
