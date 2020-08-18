@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  protractor_basic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APPLITOOLS_API_KEY
+  protractor_ultrafastgrid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        repo: tutorial-protractor-ultrafastgrid
+    environment:
+      - APPLITOOLS_API_KEY
+
