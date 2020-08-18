@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  playwright_basic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APPLITOOLS_API_KEY
+  playwright_ultrafastgrid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        repo: tutorial-playwright-ultrafastgrid
+    environment:
+      - APPLITOOLS_API_KEY
+
